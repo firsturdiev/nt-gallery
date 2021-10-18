@@ -30,6 +30,9 @@ function goToPrevImg() {
   if (prevImg) {
     elModalImg.src = prevImg.dataset.largeImg;
     elModalCaption.textContent = prevImg.dataset.imgDescription;
+  } else {
+    elModalImg.src = elsGalleryImg[elsGalleryImg.length - 1].dataset.largeImg;
+    elModalCaption.textContent = elsGalleryImg[elsGalleryImg.length - 1].dataset.imgDescription;
   }
 }
 
@@ -39,6 +42,9 @@ function goToNextImg() {
   if (nextImg) {
     elModalImg.src = nextImg.dataset.largeImg;
     elModalCaption.textContent = nextImg.dataset.imgDescription;
+  } else {
+    elModalImg.src = elsGalleryImg[0].dataset.largeImg;
+    elModalCaption.textContent = elsGalleryImg[0].dataset.imgDescription;
   }
 }
 
